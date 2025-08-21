@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 34e5ade2d5f538183c4fc538de1825d6eac33cdd14bcc18491ba7772401f4f3a
+    cni.projectcalico.org/podIP: 172.16.135.41/32
+    cni.projectcalico.org/podIPs: 172.16.135.41/32
+  creationTimestamp: "2025-08-19T01:43:17Z"
+  generation: 1
+  labels:
+    run: testpod
+  name: testpod
+  namespace: default
+  resourceVersion: "319988"
+  uid: 91fda881-70e0-4561-a641-ec1cc290e6aa
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: testpod
+    ports:
+    - containerPort: 80
+  serviceAccountName: pod-viewer
